@@ -8,7 +8,7 @@ def main():
     if rep.status_code != 200:
         fail("Avaition request failed with status %d", rep.status_code)
 
-    rate = rep.json()["id"]["temp"]["wspd"]["wgst"]["wdir"]["cover"]["visib"]
+    rate = rep.json()["temp"]["wspd"]["wgst"]["wdir"]["cover"]["visib"]
 
     return render.Root(
         child = render.Text("BTC: %d USD" % rate)
