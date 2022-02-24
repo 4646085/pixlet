@@ -8,8 +8,8 @@ def main():
     if rep.status_code != 200:
         fail("Coindesk request failed with status %d", rep.status_code)
 
-    rate = rep.json()["bpi"]["USD"]["rate_float"]
+    rate = rep.json()["bpi"]["GBP"]["rate_float"]
 
     return render.Root(
-        child = render.Text("BTC: %d USD" % rate)
+        child = render.Text("BTC: %d GPB" % rate)
     )
