@@ -1,7 +1,7 @@
 load("render.star", "render")
 load("http.star", "http")
 
-Weather_URL = "https://www.aviationweather.gov/cgi-bin/json/NavSiteJSON.php"
+Weather_URL = "https://www.aviationweather.gov//cgi-bin/json/MetarJSON.php"
 
 def main():
     rep = http.get(Weather_URL)
